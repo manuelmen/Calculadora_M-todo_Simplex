@@ -859,16 +859,8 @@ class Simplex(QDialog):
                 pivColumna = 0 
                 c=6
                 r=5
-                for i in range(2):
-                    itemColumna = self.ui.matriz.item(i+2,c)
-                    itemColumna1 = float(itemColumna.text())
-                    pivote = i+2
-                    if itemColumna1 == varSale:
-                        
-                        pivFila = pivote
-
                 for i in range(4):
-                            
+
                     itemFila = self.ui.matriz.item(r,i+2)
                     itemFila1 = float(itemFila.text())
                     pivote = i+2
@@ -876,6 +868,18 @@ class Simplex(QDialog):
                     if itemFila1 == varEntra:
                         
                         pivColumna = pivote
+                
+                for i in range(2):
+                    itemColumna = self.ui.matriz.item(i+2,c)
+                    itemColumna1 = float(itemColumna.text())
+                    pivote = i+2
+                    if arrayCeldas[i] == 0:
+                        print("nada que hacer")
+                    else:
+                        valor = itemColumna1/arrayCeldas[i]
+                        if valor == variableSaliente:
+                        
+                            pivFila = pivote
                     
                
                 self.iteracion(pivFila, pivColumna)
@@ -1092,14 +1096,6 @@ class Simplex(QDialog):
                 pivColumna = 0 
                 c=7
                 r=6
-                for i in range(3):
-                    itemColumna = self.ui.matriz.item(i+2,c)
-                    itemColumna1 = float(itemColumna.text())
-                    pivote = i+2
-                    if itemColumna1 == varSale:
-                        
-                        pivFila = pivote
-
                 for i in range(5):
                             
                     itemFila = self.ui.matriz.item(r,i+2)
@@ -1109,6 +1105,21 @@ class Simplex(QDialog):
                     if itemFila1 == varEntra:
                         
                         pivColumna = pivote
+                # print(arrayCeldas)
+
+                for i in range(3):
+                    itemColumna = self.ui.matriz.item(i+2,c)
+                    itemColumna1 = float(itemColumna.text())
+                    pivote = i+2
+                    if arrayCeldas[i] == 0:
+                        print("nada que hacer")
+                    else:
+                        valor = itemColumna1/arrayCeldas[i]
+                        if valor == variableSaliente:
+                        
+                            pivFila = pivote
+
+                
                     
                 
                 self.iteracion2(pivFila,pivColumna)
