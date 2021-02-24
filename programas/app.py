@@ -726,14 +726,14 @@ class Simplex(QDialog):
                 varEntra=0
                 # x1= float(self.ui.matriz.item())
                 # x2= funObX2
-                # j1= 0
-                # j2= 0
+                # S1= 0
+                # S2= 0
                 arrayZj = []
                 for m in range(4):
                     itemZj = self.ui.matriz.item(5,m+2)
                     Zj = float(itemZj.text())
                     arrayZj.append(Zj) 
-                # arrayZjCj = [x1,x2,j1,j2]
+                # arrayZjCj = [x1,x2,S1,S2]
                 numMayor = max(arrayZj)
                 # print(numMayor)
 
@@ -927,7 +927,8 @@ class Simplex(QDialog):
                             print("No se divide para 0")
                         else:
                             resultado = arrayBi[i]/item
-                            arregloVSaliente.append(resultado)
+                            if resultado > 0:
+                                arregloVSaliente.append(resultado)
                     variableSaliente = min(arregloVSaliente)
                     
                    
@@ -958,8 +959,12 @@ class Simplex(QDialog):
                     for i in range(3):
                         item = float(self.ui.matriz.item(i+2,3).text())
                         arrayCeldas.append(item)
-                        resultado = arrayBi[i]/item
-                        arregloVSaliente.append(resultado)
+                        if item == 0:
+                            print("No se divide para cero")
+                        else:
+                            resultado = arrayBi[i]/item
+                            if resultado > 0:
+                                arregloVSaliente.append(resultado)
                     variableSaliente = min(arregloVSaliente)
                     
                     
@@ -989,8 +994,12 @@ class Simplex(QDialog):
                     for i in range(3):
                         item = float(self.ui.matriz.item(i+2,4).text())
                         arrayCeldas.append(item)
-                        resultado = arrayBi[i]/item
-                        arregloVSaliente.append(resultado)
+                        if item == 0:
+                            print("No se divide para 0")
+                        else:
+                            resultado = arrayBi[i]/item
+                            if resultado > 0:
+                                arregloVSaliente.append(resultado)
                     variableSaliente = min(arregloVSaliente)
                     
                     #Determinamos si la variable saliente es S1 o S2
@@ -1016,11 +1025,15 @@ class Simplex(QDialog):
                     arrayCeldas = []
                     arrayBi = [bi1,bi2,bi3]
                     arregloVSaliente = []
-                    for i in range(2):
+                    for i in range(3):
                         item = float(self.ui.matriz.item(i+2,5).text())
                         arrayCeldas.append(item)
-                        resultado = arrayBi[i]/item
-                        arregloVSaliente.append(resultado)
+                        if item == 0:
+                            print("No se divide para 0")
+                        else:
+                            resultado = arrayBi[i]/item
+                            if resultado > 0:
+                                arregloVSaliente.append(resultado)
                     variableSaliente = min(arregloVSaliente)
                     
                     #Determinamos si la variable saliente es S1 o S2
@@ -1050,11 +1063,15 @@ class Simplex(QDialog):
                     arrayCeldas = []
                     arrayBi = [bi1,bi2,bi3]
                     arregloVSaliente = []
-                    for i in range(2):
+                    for i in range(3):
                         item = float(self.ui.matriz.item(i+2,6).text())
                         arrayCeldas.append(item)
-                        resultado = arrayBi[i]/item
-                        arregloVSaliente.append(resultado)
+                        if item == 0:
+                            print("No se divide para 0")
+                        else:
+                            resultado = arrayBi[i]/item
+                            if resultado > 0:
+                                arregloVSaliente.append(resultado)
                     variableSaliente = min(arregloVSaliente)
                     
                     #Determinamos si la variable saliente es S1 o S2
