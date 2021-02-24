@@ -14,7 +14,7 @@ A continuación, se va a estar mostrando y explicando todos los procesos y funci
 # Ejecución
 
 Link de descarga de la aplicación:
-https://drive.google.com/file/d/1gRK6gn1zdmKgF2z_EysRzkg_r4ZRH35i/view?usp=sharing  
+https://drive.google.com/file/d/1cZH9t-A7e4bSdNX2L5ogiGdLMMLa9G32/view?usp=sharing  
 
 Una vez descargada la aplicación en nuestro ordenador nos quedara un icono ejecutable. 
 
